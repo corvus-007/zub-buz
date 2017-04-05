@@ -1,0 +1,73 @@
+@mixin createButton() {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 30px;
+  border: 3px solid transparent;
+  text-align: center;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: normal;
+  white-space: nowrap;
+  outline: none;
+  user-select: none;
+  border-radius: 40px;
+  box-sizing: border-box;
+  transition: background-color 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.button {
+  @include createButton();
+
+  color: $accent-color;
+  background-color: transparent;
+  border-color: $button-border-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    border-radius: 40px;
+    background-color: $accent-color;
+    // background-color: rgba(89, 140, 212, 0.75);
+    transition: 0.25s;
+  }
+
+  &:hover,
+  &:focus {
+    color: #fff;
+
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &--has-icon {
+    padding-left: 12px;
+  }
+}
+
+.button__icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin-right: 25px;
+  background-color: #fff;
+}
+
+.button__text {
+  position: relative;
+  border-bottom: 1px solid;
+  transition: border-bottom-color 0.1s;
+}
+
+.button:hover .button__text {
+  border-bottom-color: transparent;
+}

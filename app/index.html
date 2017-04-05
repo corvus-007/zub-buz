@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-wrapper">
+    @@include('blocks/site-header.html')
+    <div class="billboard">
+      <div class="billboard__slider">
+        <div class="billboard__slide" style="background-image: url(images/billboard/01.jpg);"></div>
+        <div class="billboard__slide" style="background-image: url(images/billboard/02.jpg);"></div>
+        <div class="billboard__slide" style="background-image: url(images/billboard/03.jpg);"></div>
+      </div>
+    </div>
+
+    <section class="index-section about-us">
+      <div class="index-section__inner about-us__inner">
+        <div class="about-us__text">
+          <div class="index-section__headline">
+            <h2 class="index-section__title" data-title="О нас">О нас</h2>
+          </div>
+          <p>В "Современной Стоматологии Дикман" города Бузулука большое внимание уделяется повышению профессиональной квалификации всех сотрудников.</p>
+
+          <p>На вооружении наших врачей самые последние технологии и достижения современной медицины. Новейшее оборудование и высокий уровень знаний наших специалистов, позволяют провести полное обследование пациентов и индивидуально спланировать наиболее рациональный план лечения.</p>
+
+          <p>На протяжении 10 лет мы успешно поддерживаем статус лучшей стоматологии Бузулука!</p>
+        </div>
+        <div class="about-us__benefits">
+          <ul class="about-us__benefits-list">
+            <li class="about-us__benefit">
+              <div class="about-us__benefit-inner">
+                <div class="about-us__benefit-content">
+                  <svg class="about-us__benefit-icon" width="48" height="48">
+                    <use xlink:href=""></use>
+                  </svg>
+                  <span class="about-us__benefit-caption">
+                    Более 10 лет опыта
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li class="about-us__benefit">
+              <div class="about-us__benefit-inner">
+                <div class="about-us__benefit-content">
+                  <svg class="about-us__benefit-icon" width="48" height="48">
+                    <use xlink:href=""></use>
+                  </svg>
+                  <span class="about-us__benefit-caption">
+                    Чуткое и профессиональное отношение к клиенту
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li class="about-us__benefit">
+              <div class="about-us__benefit-inner">
+                <div class="about-us__benefit-content">
+                  <svg class="about-us__benefit-icon" width="48" height="48">
+                    <use xlink:href=""></use>
+                  </svg>
+                  <span class="about-us__benefit-caption">
+                    Качественные материалы и современные технологии
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li class="about-us__benefit">
+              <div class="about-us__benefit-inner">
+                <div class="about-us__benefit-content">
+                  <svg class="about-us__benefit-icon" width="48" height="48">
+                    <use xlink:href=""></use>
+                  </svg>
+                  <span class="about-us__benefit-caption">
+                    Высококвалифицированные специалисты
+                  </span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="index-section services">
+      <div class="index-section__inner">
+        <div class="index-section__headline">
+          <a href="" class="button button--has-icon">
+            <svg class="button__icon" width="22" height="22">
+              <use xlink:href=""></use>
+            </svg>
+            <span class="button__text">Скачать прайс-лист</span>
+          </a>
+          <h2 class="index-section__title index-section__title--align-right" data-title="Наши услуги">Наши услуги</h2>
+        </div>
+
+        <ul class="services__list">
+          <li class="services__item">
+            <svg class="services__item-icon" width="48" height="48">
+              <use xlink:href=""></use>
+            </svg>
+            <div class="services__item-text">
+              <h3 class="services__item-title">Лечение зубов</h3>
+              <p class="services__item-description">Удаление старой пломбы, постановка новой пломбы, светового отверждения</p>
+            </div>
+          </li>
+          <li class="services__item">
+            <svg class="services__item-icon" width="48" height="48">
+              <use xlink:href=""></use>
+            </svg>
+            <div class="services__item-text">
+              <h3 class="services__item-title">Эстетическая реставрация</h3>
+              <p class="services__item-description">Эстетическая реставрация зуба, восстановление формы зуба</p>
+            </div>
+          </li>
+          <li class="services__item">
+            <svg class="services__item-icon" width="48" height="48">
+              <use xlink:href=""></use>
+            </svg>
+            <div class="services__item-text">
+              <h3 class="services__item-title">Лечение кариеса</h3>
+              <p class="services__item-description">Кариес – одно из самых распространенных и неприятных заболеваний зубов</p>
+            </div>
+          </li>
+          <li class="services__item">
+            <svg class="services__item-icon" width="48" height="48">
+              <use xlink:href=""></use>
+            </svg>
+            <div class="services__item-text">
+              <h3 class="services__item-title">Имплантация зубов</h3>
+              <p class="services__item-description">Является эффективным способом замещения отсутствующих или утраченных зубов</p>
+            </div>
+          </li>
+          <li class="services__item">
+            <svg class="services__item-icon" width="48" height="48">
+              <use xlink:href=""></use>
+            </svg>
+            <div class="services__item-text">
+              <h3 class="services__item-title">Ровная улыбка</h3>
+              <p class="services__item-description">Сделать зубы ровными, исправить прикус – помогут наши врачи-ортодонты</p>
+            </div>
+          </li>
+          <li class="services__item">
+            <svg class="services__item-icon" width="48" height="48">
+              <use xlink:href=""></use>
+            </svg>
+            <div class="services__item-text">
+              <h3 class="services__item-title">Профилактический осмотр</h3>
+              <p class="services__item-description">Помните, заболевание гораздо проще предотвратить, чем лечить</p>
+            </div>
+          </li>
+          <li class="services__item">
+            <svg class="services__item-icon" width="48" height="48">
+              <use xlink:href=""></use>
+            </svg>
+            <div class="services__item-text">
+              <h3 class="services__item-title">Чистка отложений и налета</h3>
+              <p class="services__item-description">Профессиональный уход за полостью рта способен предотвратить множество заболеваний</p>
+            </div>
+          </li>
+          <li class="services__item">
+            <svg class="services__item-icon" width="48" height="48">
+              <use xlink:href=""></use>
+            </svg>
+            <div class="services__item-text">
+              <h3 class="services__item-title">Отбеливание зубов</h3>
+              <p class="services__item-description">Наши специалисты подберут для вас наиболее щадящий метод отбеливания зубов</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cta cta--has-b-b">
+      <h2 class="cta__title">Записаться на бесплатную консультацию</h2>
+      @@include('blocks/form-cta.html')
+      <div class="cta__footer">
+        <h3 class="cta__footer-title">Вы узнаете</h3>
+        <ul class="cta__footer-list">
+          <li class="cta__footer-item">
+            Какие технологии лучше всего подходят для вашего случая?
+          </li>
+          <li class="cta__footer-item">
+            Как долго длится та или иная услуга и сколько это стоит?
+          </li>
+          <li class="cta__footer-item">
+            Какое оборудование и материалы мы используем в работе?
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="index-section team">
+      <div class="index-section__inner">
+        <div class="index-section__headline">
+          <h2 class="index-section__title" data-title="Наш коллектив">Наш коллектив</h2>
+        </div>
+
+        <ul class="team__list">
+          <li class="team__item">
+            <div class="team__item-photo-adjust">
+              <div class="team__item-photo-holder">
+                <img class="team__item-photo" src="//placehold.it/150x150/1b9/fff" srcset="//placehold.it/300x300/19b/fff 2x" alt="">
+              </div>
+            </div>
+            <div class="team__item-text">
+              <h3 class="team__item-name">
+                <span>Ченцова</span>
+                Нина Михайловна</h3>
+              <span class="team__item-post">Врач-стоматолог</span>
+            </div>
+          </li>
+          <li class="team__item">
+            <div class="team__item-photo-adjust">
+              <div class="team__item-photo-holder">
+                <img class="team__item-photo" src="//placehold.it/150x150/1b9/fff" srcset="//placehold.it/300x300/19b/fff 2x" alt="">
+              </div>
+            </div>
+            <div class="team__item-text">
+              <h3 class="team__item-name">
+                <span>Нуянзина</span>
+                Таисия Ивановна</h3>
+              <span class="team__item-post">Стоматолог-терапевт</span>
+            </div>
+          </li>
+          <li class="team__item">
+            <div class="team__item-photo-adjust">
+              <div class="team__item-photo-holder">
+                <img class="team__item-photo" src="//placehold.it/150x150/1b9/fff" srcset="//placehold.it/300x300/19b/fff 2x" alt="">
+              </div>
+            </div>
+            <div class="team__item-text">
+              <h3 class="team__item-name">
+                <span>Анисимова</span>
+                Ольга Александровна</h3>
+              <span class="team__item-post">Детский врач-стоматолог, стоматолог-ортодонт</span>
+            </div>
+          </li>
+          <li class="team__item">
+            <div class="team__item-photo-adjust">
+              <div class="team__item-photo-holder">
+                <img class="team__item-photo" src="//placehold.it/150x150/1b9/fff" srcset="//placehold.it/300x300/19b/fff 2x" alt="">
+              </div>
+            </div>
+            <div class="team__item-text">
+              <h3 class="team__item-name">
+                <span>Беспалова</span>
+                Галина Александровна</h3>
+              <span class="team__item-post">Врач стоматолог, терапевт-пародонтолог</span>
+            </div>
+          </li>
+          <li class="team__item">
+            <div class="team__item-photo-adjust">
+              <div class="team__item-photo-holder">
+                <img class="team__item-photo" src="//placehold.it/150x150/1b9/fff" srcset="//placehold.it/300x300/19b/fff 2x" alt="">
+              </div>
+            </div>
+            <div class="team__item-text">
+              <h3 class="team__item-name">
+                <span>Кандауров</span>
+                Василь Владимирович</h3>
+              <span class="team__item-post">Врач стоматолог</span>
+            </div>
+          </li>
+          <li class="team__item">
+            <div class="team__item-photo-adjust">
+              <div class="team__item-photo-holder">
+                <img class="team__item-photo" src="//placehold.it/150x150/1b9/fff" srcset="//placehold.it/300x300/19b/fff 2x" alt="">
+              </div>
+            </div>
+            <div class="team__item-text">
+              <h3 class="team__item-name">
+                <span>Мелюшко</span>
+                Сергей Владимирович</h3>
+              <span class="team__item-post">Врач стоматолог</span>
+            </div>
+          </li>
+          <li class="team__item">
+            <div class="team__item-photo-adjust">
+              <div class="team__item-photo-holder">
+                <img class="team__item-photo" src="//placehold.it/150x150/1b9/fff" srcset="//placehold.it/300x300/19b/fff 2x" alt="">
+              </div>
+            </div>
+            <div class="team__item-text">
+              <h3 class="team__item-name">
+                <span>Свиридова</span>
+                Елена Николаевна</h3>
+              <span class="team__item-post">Зубной врач</span>
+            </div>
+          </li>
+          <li class="team__item">
+            <div class="team__item-photo-adjust">
+              <div class="team__item-photo-holder">
+                <img class="team__item-photo" src="//placehold.it/150x150/1b9/fff" srcset="//placehold.it/300x300/19b/fff 2x" alt="">
+              </div>
+            </div>
+            <div class="team__item-text">
+              <h3 class="team__item-name">
+                <span>Красильникова</span>
+                Галина Владимировна</h3>
+              <span class="team__item-post">Зубной врач</span>
+            </div>
+          </li>
+          <li class="team__item">
+            <div class="team__item-photo-adjust">
+              <div class="team__item-photo-holder">
+                <img class="team__item-photo" src="//placehold.it/150x150/1b9/fff" srcset="//placehold.it/300x300/19b/fff 2x" alt="">
+              </div>
+            </div>
+            <div class="team__item-text">
+              <h3 class="team__item-name">
+                <span>Анисимов</span>
+                Андрей Михайлович</h3>
+              <span class="team__item-post">Зубной врач</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="index-section contacts">
+      <div class="index-section__inner">
+        <div class="index-section__headline">
+          <h2 class="index-section__title index-section__title--align-right" data-title="Контакты">Контакты</h2>
+        </div>
+
+      </div>
+    </section>
+  </div>
+  @@include('blocks/site-footer.html')
+</body>
+</html>

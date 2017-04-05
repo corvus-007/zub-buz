@@ -1,0 +1,53 @@
+.main-nav {
+  background-color: $accent-color;
+  color: #fff;
+}
+
+.main-nav__inner {
+  @include container();
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-nav__list {
+  @include clear-list();
+
+  display: flex;
+  flex-shrink: 0;
+
+  li {
+
+  }
+
+  a {
+    display: block;
+    padding: 16px 10px;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: none;
+
+    &:hover {
+      background-color: $base-color;
+    }
+  }
+
+  li:first-child a {
+    padding-left: 0;
+  }
+
+  li:last-child a {
+    padding-right: 0;
+  }
+
+  @media (max-width: $media-tablet-down) {
+    display: none;
+  }
+}
+
+.main-nav__button {
+  @include createButtonFlat();
+}

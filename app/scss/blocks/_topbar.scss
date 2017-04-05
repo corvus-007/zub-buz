@@ -1,0 +1,55 @@
+.topbar {
+  @include container();
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.topbar__logo {
+
+}
+
+.topbar__logo-link {
+
+}
+
+.topbar__logo-image {
+
+}
+
+.topbar__info {
+
+}
+
+.topbar__info-list {
+  @include clear-list();
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.topbar__info-item {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.topbar__info-icon {
+  background-color: $accent-color;
+  margin-right: 20px;
+}
+
+.topbar__info-text {
+
+  p {
+    margin: 0;
+  }
+}

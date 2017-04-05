@@ -1,0 +1,50 @@
+.billboard {
+
+}
+
+.billboard__slider {
+
+  .slick-dots {
+    @include clear-list();
+
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+
+    li {
+      margin-right: 0.5em;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    button {
+      display: block;
+      width: rem(13);
+      height: rem(13);
+      padding: 0;
+      background: none;
+      border-radius: 50%;
+      border: 2px solid $accent-color;
+      text-indent: -1000px;
+      overflow: hidden;
+      outline: none;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .slick-active button {
+      background: $accent-color;
+      cursor: default;
+    }
+  }
+}
+
+.billboard__slide {
+  height: 0;
+  padding-top: calc(450 / 1280 * 100vw);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
