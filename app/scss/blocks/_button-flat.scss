@@ -20,6 +20,7 @@
 .button-flat {
   @include createButtonFlat();
 
+  color: $accent-color;
   background-color: $button-flat-bg;
 
   &:hover,

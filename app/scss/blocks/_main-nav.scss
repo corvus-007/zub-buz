@@ -1,6 +1,6 @@
 .main-nav {
-  background-color: $accent-color;
   color: #fff;
+  background-color: $accent-color;
 }
 
 .main-nav__inner {
@@ -17,30 +17,31 @@
   display: flex;
   flex-shrink: 0;
 
-  li {
+  & > li {
+    position: relative;
+    z-index: 1;
 
-  }
+    & > a {
+      display: block;
+      padding: 16px 10px;
+      font-size: 14px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+      border-bottom: none;
 
-  a {
-    display: block;
-    padding: 16px 10px;
-    font-size: 14px;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-bottom: none;
-
-    &:hover {
-      background-color: $base-color;
+      &:hover {
+        background-color: $base-color;
+      }
     }
-  }
 
-  li:first-child a {
-    padding-left: 0;
-  }
+    &:first-child a {
+      padding-left: 0;
+    }
 
-  li:last-child a {
-    padding-right: 0;
+    &:last-child a {
+      padding-right: 0;
+    }
   }
 
   @media (max-width: $media-tablet-down) {
@@ -50,4 +51,31 @@
 
 .main-nav__button {
   @include createButtonFlat();
+}
+
+.sub-menu-drop {
+  background-color: #d77;
+  position: absolute;
+}
+
+.sub-menu {
+  @include clear-list();
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #d77;
+  max-height: 400px;
+
+  & > li {
+    width: 400px;
+
+    & > a {
+      display: block;
+      padding: 10px;
+      color: #fff;
+      text-decoration: none;
+      border-bottom: none;
+    }
+  }
 }
