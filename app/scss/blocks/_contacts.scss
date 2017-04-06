@@ -1,0 +1,51 @@
+.contacts {
+
+}
+
+.contacts__frame {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.contacts__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #5db;
+}
+
+.contacts__info {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 70px;
+  border: 5px solid $secondary-color;
+  background-color: #fff;
+}
+
+.contacts__info-item {
+  margin: 0;
+  margin-bottom: 1em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contacts__phones {
+  a {
+    color: currentColor;
+    border-bottom: none;
+  }
+}
+
+.contacts__work {
+
+}
+
+.contacts__work-off-day {
+  color: $muted-color;
+}
