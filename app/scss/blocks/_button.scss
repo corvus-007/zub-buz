@@ -16,6 +16,7 @@
   outline: none;
   border: 3px solid $button-border-color;
   border-radius: 40px;
+  color: $accent-color;
   box-sizing: border-box;
   cursor: pointer;
   user-select: none;
@@ -59,12 +60,9 @@
 
 .button__text {
   position: relative;
-  mix-blend-mode: lighten;
-  // border-bottom: 1px solid;
 
 }
 
 .button:hover .button__text {
-  // color: #fff;
-  // border-bottom-color: transparent;
+
 }
