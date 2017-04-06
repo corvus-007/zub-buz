@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Загрузка карты
   loadMapScript()
 
+
+
   /*=================================
   =            Billboard            =
   =================================*/
@@ -59,9 +61,21 @@ function initializeMap() {
     lng: 52.265363
   };
 
+  var centerMapMobile = locationOffice;
+  var centerMapDesktop = {
+    lat: 52.790924,
+    lng: 52.26
+  };
+
+  if ('matchMedia' in window) {
+    var centerMap = (matchMedia('(min-width: 667px)').matches) ? centerMapDesktop: centerMapMobile;
+  } else {
+    centerMap = locationOffice;
+  }
+
   function createProp(defaultLocation) {
     return {
-      center: defaultLocation,
+      center: centerMap,
       zoom: 15,
       streetViewControl: false,
       zoomControl: true,
