@@ -60,8 +60,20 @@
 }
 
 .topbar__phones {
-  a {
-    color: currentColor;
-    border-bottom: none;
+
+}
+
+.topbar__phone {
+  display: inline-block;
+  margin-right: 10px;
+  color: currentColor;
+  border-bottom: none;
+
+  &:last-child() {
+    margin-right: 0;
   }
+}
+
+.topbar__trigger-callback {
+  @include dotted-link();
 }
