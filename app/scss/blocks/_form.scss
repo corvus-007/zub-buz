@@ -1,5 +1,5 @@
 .form-item {
-  margin-bottom: rem(15);
+  margin-bottom: 15px;
   display: block;
 }
 
@@ -22,7 +22,7 @@
   width: 100%;
   padding: 13px 20px;
   font: inherit;
-  font-size: rem(18);
+  font-size: 18px;
   line-height: normal;
   background: #fff;
   border: 3px solid transparent;
@@ -57,7 +57,7 @@ textarea.form-control {
 
 .form-submit {
   width: 100%;
-  padding: 14px 5px;
+  padding: 15px 5px 13px;
   font-size: 15px;
 }
 

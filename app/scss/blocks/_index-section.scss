@@ -1,6 +1,11 @@
 .index-section {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media (min-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
 .index-section__inner {
@@ -22,15 +27,13 @@
   line-height: 1;
   font-family: $secondary-font;
   text-transform: uppercase;
-
-  &--align-right {
-    text-align: right;
-  }
+  text-align: center;
 
   @media (min-width: 768px) {
     padding-left: 12px;
     font-size: 80px;
     color: $secondary-color;
+    text-align: left;
 
     &::before {
       content: attr(data-title);
@@ -41,12 +44,13 @@
       font-size: 30px;
       font-family: $secondary-font;
       text-transform: uppercase;
-      color: $base-color;
+      color: $primary-color;
       pointer-events: none;
     }
 
     &--align-right {
       padding-right: 12px;
+      text-align: right;
 
       &::before {
         right: 0;

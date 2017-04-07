@@ -44,8 +44,9 @@
 }
 
 .topbar__info-icon {
-  background-color: $accent-color;
   margin-right: 20px;
+  color: $accent-color;
+  fill: currentColor;
 }
 
 .topbar__info-text {

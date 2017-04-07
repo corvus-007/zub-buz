@@ -35,6 +35,7 @@
 
   @media (min-width: 1024px) {
     @include createFlexColumn(3);
+
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -46,11 +47,11 @@
   flex-shrink: 0;
   margin-right: 20px;
   color: $accent-color;
-  background-color: $accent-color;
+  fill: currentColor;
 
   @media (min-width: 568px) {
     margin-right: 0;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 }
 

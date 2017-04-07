@@ -4,11 +4,17 @@
 
 .socials__item {
   display: inline-block;
-  vertical-align: middle;
+  margin-right: 0.7em;
   width: 33px;
   height: 33px;
   text-decoration: none;
-  margin-right: 0.7em;
+  vertical-align: middle;
+  opacity: 0.9;
+  transition: opacity 0.25s;
+
+  &:hover {
+    opacity: 1;
+  }
 
   &:last-child {
     margin-right: 0;
@@ -18,5 +24,4 @@
 .socials__icon {
   width: 32px;
   height: 32px;
-  background-color: #33a;
 }

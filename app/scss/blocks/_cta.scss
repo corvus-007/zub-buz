@@ -23,7 +23,6 @@
   @include container();
 
   margin-top: 40px;
-
 }
 
 .cta__footer-title {
@@ -53,17 +52,16 @@
     content: "";
     margin-right: 20px;
     display: inline-block;
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
     flex-shrink: 0;
-    background-color: $accent-color;
+    background: url("../images/checked.svg") no-repeat center / contain;
   }
 
   @media (min-width: 667px) {
+    align-items: flex-start;
     width: calc(100% / 3 - 20px);
     margin-right: 40px;
-
-    align-items: flex-start;
 
     &:last-child {
       margin-right: 0;
