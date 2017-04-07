@@ -112,6 +112,21 @@
   background-repeat: no-repeat;
   background-blend-mode: normal, overlay, normal, overlay;
   box-shadow: 0 3px 6px rgba($base-color, 0.3);
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 9px;
+    background-color: rgba($accent-color, 0.2);
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    background-color: rgba(#111, 0.2);
+    transition: background-color 0.15s;
+
+    &:hover {
+      background-color: rgba(#111, 0.5);
+    }
+  }
 }
 
 .main-nav__list > li:hover .sub-menu-drop {
