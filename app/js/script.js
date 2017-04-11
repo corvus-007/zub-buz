@@ -1,3 +1,7 @@
+window.addEventListener('load', function() {
+  document.body.classList.add('page-load');
+});
+
 document.addEventListener('DOMContentLoaded', function() {
   svg4everybody(); // run it now or whenever you are ready
 
@@ -68,7 +72,7 @@ function initializeMap() {
   };
 
   if ('matchMedia' in window) {
-    var centerMap = (matchMedia('(min-width: 667px)').matches) ? centerMapDesktop: centerMapMobile;
+    var centerMap = (matchMedia('(min-width: 667px)').matches) ? centerMapDesktop : centerMapMobile;
   } else {
     centerMap = locationOffice;
   }
@@ -76,7 +80,7 @@ function initializeMap() {
   function createProp(defaultLocation) {
     return {
       center: centerMap,
-      zoom: 15,
+      zoom: 14,
       streetViewControl: false,
       zoomControl: true,
       zoomControlOptions: {
@@ -84,14 +88,132 @@ function initializeMap() {
       },
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       scrollwheel: false,
+      styles: [{
+        "featureType": "all",
+        "elementType": "geometry.fill",
+        "stylers": [{
+          "weight": "2.00"
+        }]
+      }, {
+        "featureType": "all",
+        "elementType": "geometry.stroke",
+        "stylers": [{
+          "color": "#9c9c9c"
+        }]
+      }, {
+        "featureType": "all",
+        "elementType": "labels.text",
+        "stylers": [{
+          "visibility": "on"
+        }]
+      }, {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [{
+          "color": "#f2f2f2"
+        }]
+      }, {
+        "featureType": "landscape",
+        "elementType": "geometry.fill",
+        "stylers": [{
+          "color": "#ffffff"
+        }]
+      }, {
+        "featureType": "landscape.man_made",
+        "elementType": "geometry.fill",
+        "stylers": [{
+          "color": "#ffffff"
+        }]
+      }, {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [{
+          "visibility": "off"
+        }]
+      }, {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [{
+          "saturation": -100
+        }, {
+          "lightness": 45
+        }]
+      }, {
+        "featureType": "road",
+        "elementType": "geometry.fill",
+        "stylers": [{
+          "color": "#eeeeee"
+        }]
+      }, {
+        "featureType": "road",
+        "elementType": "labels.text.fill",
+        "stylers": [{
+          "color": "#7b7b7b"
+        }]
+      }, {
+        "featureType": "road",
+        "elementType": "labels.text.stroke",
+        "stylers": [{
+          "color": "#ffffff"
+        }]
+      }, {
+        "featureType": "road.highway",
+        "elementType": "all",
+        "stylers": [{
+          "visibility": "simplified"
+        }]
+      }, {
+        "featureType": "road.arterial",
+        "elementType": "labels.icon",
+        "stylers": [{
+          "visibility": "off"
+        }]
+      }, {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [{
+          "visibility": "off"
+        }]
+      }, {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [{
+          "color": "#46bcec"
+        }, {
+          "visibility": "on"
+        }]
+      }, {
+        "featureType": "water",
+        "elementType": "geometry.fill",
+        "stylers": [{
+          "color": "#e3d8bc"
+        }]
+      }, {
+        "featureType": "water",
+        "elementType": "labels.text.fill",
+        "stylers": [{
+          "color": "#070707"
+        }]
+      }, {
+        "featureType": "water",
+        "elementType": "labels.text.stroke",
+        "stylers": [{
+          "color": "#ffffff"
+        }]
+      }]
     };
   }
 
   var mapProp = createProp(locationOffice);
   var map = new google.maps.Map(document.getElementById("contacts-map"), mapProp);
-  var markerPriem = new google.maps.Marker({
+  var ICONPATH = 'http://ideatech.ru/wp-content/themes/doberman/images/map-pin.svg';
+  var ICONPATH = 'images/map-pin.svg';
+  var marker = new google.maps.Marker({
     position: locationOffice,
     map: map,
-    title: 'Современная стоматология Дикман'
+    title: 'Современная стоматология Дикман',
+    icon: {
+      url: ICONPATH
+    }
   });
 }

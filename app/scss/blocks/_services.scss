@@ -1,15 +1,19 @@
 .services {
-
+  position: relative;
+  text-align: center;
 }
 
 .services__list {
   @include clear-list();
 
-  margin-bottom: -40px;
 
   @media (min-width: 568px) {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: -40px;
   }
 }
 
@@ -68,4 +72,25 @@
 
 .services__item-description {
   margin: 0;
+}
+
+.services__buton-wrapper {
+  text-align: center;
+}
+
+.services__button {
+
+  &--top {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    &--top {
+      display: inline-flex;
+    }
+
+    &--bottom {
+      display: none;
+    }
+  }
 }

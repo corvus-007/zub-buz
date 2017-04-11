@@ -42,9 +42,13 @@
 }
 
 .billboard__slide {
-  height: 0;
-  padding-top: calc(450 / 1280 * 100vw);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  // height: 0;
+  // padding-top: calc(350 / 1280 * 100vw);
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
+
+  img {
+    width: 100%;
+  }
 }

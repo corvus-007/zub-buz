@@ -32,11 +32,13 @@
   transition: 0.3s;
 
   &:hover {
-    background: #edeef1;
+    // background: #edeef1;
+    border-color: #ccc;
+    // background: $secondary-color;
   }
 
   &:focus {
-    border-color: #bbb;
+    border-color: #aaa;
   }
 
   &::placeholder {

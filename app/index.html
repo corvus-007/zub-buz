@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Главная – Современная Стоматология Дикман</title>
+  <style>
+    html {
+      background: url(images/tail-spin.svg) fixed no-repeat 50% / 100px auto;
+    }
+    body {
+      opacity: 0;
+      overflow: hidden;
+    }
+  </style>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,9 +21,16 @@
     @@include('blocks/site-header.html')
     <div class="billboard">
       <div class="billboard__slider">
-        <div class="billboard__slide" style="background-image: url(images/billboard/01.jpg);"></div>
-        <div class="billboard__slide" style="background-image: url(images/billboard/02.jpg);"></div>
-        <div class="billboard__slide" style="background-image: url(images/billboard/03.jpg);"></div>
+        <div class="billboard__slide">
+          <a href="#">
+            <img src="images/billboard/01.jpg" alt="">
+          </a>
+        </div>
+        <div class="billboard__slide">
+          <a href="#">
+            <img src="images/billboard/02.jpg" alt="">
+          </a>
+        </div>
       </div>
     </div>
 
@@ -88,12 +104,13 @@
     <section class="index-section services">
       <div class="index-section__inner">
         <div class="index-section__headline">
-          <a href="" class="button button--has-icon">
+          <a href="#" class="services__button services__button--top button button--has-icon">
             <svg class="button__icon" width="22" height="22">
               <use xlink:href="images/symbols.svg#file-pdf"></use>
             </svg>
             <span class="button__text">Скачать прайс-лист</span>
           </a>
+
           <h2 class="index-section__title index-section__title--align-right" data-title="Наши услуги">Наши услуги</h2>
         </div>
 
@@ -171,6 +188,15 @@
             </div>
           </li>
         </ul>
+
+        <div class="services__buton-wrapper">
+          <a href="#" class="services__button services__button--bottom button button--has-icon">
+            <svg class="button__icon" width="22" height="22">
+              <use xlink:href="images/symbols.svg#file-pdf"></use>
+            </svg>
+            <span class="button__text">Скачать прайс-лист</span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -203,7 +229,7 @@
           <li class="team__item">
             <div class="team__item-photo-adjust">
               <div class="team__item-photo-holder">
-                <img class="team__item-photo" src="//placehold.it/150x150/1b9/fff" srcset="//placehold.it/300x300/19b/fff 2x" alt="">
+                <img class="team__item-photo" src="images/team/1.jpg" alt="">
               </div>
             </div>
             <div class="team__item-text">
@@ -216,7 +242,7 @@
           <li class="team__item">
             <div class="team__item-photo-adjust">
               <div class="team__item-photo-holder">
-                <img class="team__item-photo" src="//placehold.it/150x150/1b9/fff" srcset="//placehold.it/300x300/19b/fff 2x" alt="">
+                <img class="team__item-photo" src="images/team/2.jpg" alt="">
               </div>
             </div>
             <div class="team__item-text">
@@ -229,7 +255,7 @@
           <li class="team__item">
             <div class="team__item-photo-adjust">
               <div class="team__item-photo-holder">
-                <img class="team__item-photo" src="//placehold.it/150x150/1b9/fff" srcset="//placehold.it/300x300/19b/fff 2x" alt="">
+                <img class="team__item-photo" src="images/team/3.jpg" alt="">
               </div>
             </div>
             <div class="team__item-text">
@@ -242,7 +268,7 @@
           <li class="team__item">
             <div class="team__item-photo-adjust">
               <div class="team__item-photo-holder">
-                <img class="team__item-photo" src="//placehold.it/150x150/1b9/fff" srcset="//placehold.it/300x300/19b/fff 2x" alt="">
+                <img class="team__item-photo" src="images/team/4.jpg" alt="">
               </div>
             </div>
             <div class="team__item-text">
@@ -255,7 +281,7 @@
           <li class="team__item">
             <div class="team__item-photo-adjust">
               <div class="team__item-photo-holder">
-                <img class="team__item-photo" src="//placehold.it/150x150/1b9/fff" srcset="//placehold.it/300x300/19b/fff 2x" alt="">
+                <img class="team__item-photo" src="images/team/5.jpg" alt="">
               </div>
             </div>
             <div class="team__item-text">
@@ -268,7 +294,7 @@
           <li class="team__item">
             <div class="team__item-photo-adjust">
               <div class="team__item-photo-holder">
-                <img class="team__item-photo" src="//placehold.it/150x150/1b9/fff" srcset="//placehold.it/300x300/19b/fff 2x" alt="">
+                <img class="team__item-photo" src="images/team/6.jpg" alt="">
               </div>
             </div>
             <div class="team__item-text">
@@ -281,7 +307,7 @@
           <li class="team__item">
             <div class="team__item-photo-adjust">
               <div class="team__item-photo-holder">
-                <img class="team__item-photo" src="//placehold.it/150x150/1b9/fff" srcset="//placehold.it/300x300/19b/fff 2x" alt="">
+                <img class="team__item-photo" src="images/team/7.jpg" alt="">
               </div>
             </div>
             <div class="team__item-text">
@@ -294,7 +320,7 @@
           <li class="team__item">
             <div class="team__item-photo-adjust">
               <div class="team__item-photo-holder">
-                <img class="team__item-photo" src="//placehold.it/150x150/1b9/fff" srcset="//placehold.it/300x300/19b/fff 2x" alt="">
+                <img class="team__item-photo" src="images/team/8.jpg" alt="">
               </div>
             </div>
             <div class="team__item-text">
@@ -307,7 +333,7 @@
           <li class="team__item">
             <div class="team__item-photo-adjust">
               <div class="team__item-photo-holder">
-                <img class="team__item-photo" src="//placehold.it/150x150/1b9/fff" srcset="//placehold.it/300x300/19b/fff 2x" alt="">
+                <img class="team__item-photo" src="images/team/9.jpg" alt="">
               </div>
             </div>
             <div class="team__item-text">
