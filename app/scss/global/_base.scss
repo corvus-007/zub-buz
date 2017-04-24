@@ -43,6 +43,10 @@ body.page-load {
   @include container();
 }
 
+.main {
+  padding-top: 100px;
+}
+
 a {
   color: $link-color;
   text-decoration: none;
