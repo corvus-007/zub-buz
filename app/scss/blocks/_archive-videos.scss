@@ -1,0 +1,66 @@
+.archive-videos {
+
+}
+
+.archive-videos__item {
+  margin-bottom: 3rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.archive-videos__poster-holder {
+  @include fitObject(600, 400);
+
+  margin-bottom: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0;
+    transform: scale(1.25);
+    background-color: rgba($accent-color, 0.6);
+    background-color: rgba(#000, 0.6);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cg fill='%23fff'%3E%3Cpath d='M256 59c26.6 0 52.4 5.2 76.68 15.47 23.45 9.93 44.52 24.13 62.62 42.23 18.1 18.1 32.3 39.17 42.23 62.62C447.8 203.6 453 229.4 453 256c0 26.6-5.2 52.4-15.47 76.68-9.93 23.45-24.13 44.52-42.23 62.62-18.1 18.1-39.17 32.3-62.62 42.23C308.4 447.8 282.6 453 256 453c-26.6 0-52.4-5.2-76.68-15.47-23.45-9.93-44.52-24.13-62.62-42.23-18.1-18.1-32.3-39.17-42.22-62.62C64.2 308.4 59 282.6 59 256c0-26.6 5.2-52.4 15.47-76.68 9.93-23.45 24.13-44.52 42.23-62.62 18.1-18.1 39.17-32.3 62.62-42.22C203.6 64.2 229.4 59 256 59m0-16C138.36 43 43 138.36 43 256s95.36 213 213 213 213-95.36 213-213S373.64 43 256 43z'/%3E%3Cpath d='M211 351c-1.25 0-2.5-.3-3.66-.9-2.67-1.36-4.34-4.1-4.34-7.1V169c0-3 1.67-5.74 4.34-7.1 2.66-1.4 5.87-1.15 8.3.6l122 87c2.1 1.5 3.36 3.9 3.36 6.5s-1.25 5-3.35 6.5l-122 87c-1.4 1-3.02 1.5-4.65 1.5zm8-166.47v142.94L319.22 256 219 184.53z'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 72px;
+    transition: 0.3s;
+  }
+}
+
+.archive-videos__item:hover .archive-videos__poster-holder {
+  &::before {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+}
+
+.archive-videos__poster {
+
+}
+
+.archive-videos__title {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.3;
+  color: $accent-color !important;
+
+  span {
+    border-bottom: 1px solid $light-color;
+    transition: 0.25s;
+  }
+}
+
+.archive-videos__item:hover .archive-videos__title,
+.archive-videos__item:focus .archive-videos__title {
+  span {
+    border-bottom-color: currentColor;
+  }
+}

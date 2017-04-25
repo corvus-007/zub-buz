@@ -1,89 +1,78 @@
 .page-title {
-  position: relative;
-  flex-grow: 1;
+  @include container();
+
   margin-top: 0;
   margin-bottom: 60px;
-  font-size: 40px;
-  line-height: 1;
-  font-family: $secondary-font;
-  text-transform: uppercase;
-  text-align: center;
+  font-size: 48px;
+  color: #3b3b3b;
 
-  @media (min-width: 768px) {
-    padding-left: 12px;
-    font-size: 80px;
-    color: $secondary-color;
-    text-align: left;
-
-    &::before {
-      content: attr(data-title);
-      position: absolute;
-      left: 0;
-      bottom: -6px;
-      z-index: 1;
-      font-size: 30px;
-      font-family: $secondary-font;
-      text-transform: uppercase;
-      color: $primary-color;
-      pointer-events: none;
-    }
-
-    &--align-right {
-      padding-right: 12px;
-      text-align: right;
-
-      &::before {
-        right: 0;
-        left: auto
-      }
-    }
-
+  @media (min-width: $media-laptop-up) {
+    max-width: 800px !important;
   }
+
+  @media (min-width: $media-laptop-xl-up) {
+    max-width: 1000px !important;
+  }
+}
+
+.page-intro {
+  margin-bottom: 60px;
+  font-size: rem(24);
+  color: #a8a9ac;
 }
 
 .page-content {
   @include clearfix;
+
+  font-size: rem(18);
+  line-height: 1.65;
+
+  .container {
+    @include container();
+
+    @media (min-width: $media-laptop-up) {
+      max-width: 800px !important;
+    }
+
+    @media (min-width: $media-laptop-xl-up) {
+      max-width: 1000px !important;
+    }
+  }
+
+  h2,
+  h3 {
+    color: #3b3b3b;
+  }
+
+  p {
+    margin-bottom: 1.65em;
+  }
 
   .alignleft,
   .alignright,
   .aligncenter {
     max-width: 100%;
     height: auto;
-    margin-top: 3.5rem;
-    margin-bottom: 3.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 
-  img.alignleft,
-  img.alignright,
-  img.aligncenter {
-    // border: 1rem solid $accentColorLight;
-  }
+  // .alignleft {
+  //   float: left;
+  //   margin-right: 3.5rem;
+  // }
 
-  .alignleft {
-    float: left;
-    margin-right: 3.5rem;
-  }
+  // .alignright {
+  //   float: right;
+  //   margin-left: 3.5rem;
+  // }
 
-  .alignright {
-    float: right;
-    margin-left: 3.5rem;
-  }
-
-  .aligncenter {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    display: block;
-  }
+  // .aligncenter {
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   text-align: center;
+  //   display: block;
+  // }
 }
 
-@media (min-width: $media-laptop-up) {
-  .page-content {
 
-    .alignleft,
-    .alignright,
-    .aligncenter {
-      width: 70%;
-    }
-  }
-}

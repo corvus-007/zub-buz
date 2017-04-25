@@ -3,25 +3,35 @@
 }
 
 .archive-events__item {
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
+
   &:last-child {
     margin-bottom: 0;
   }
 }
 
-@media (min-width: $media-tablet-up) {
-  .archive-events {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.archive-events__title {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.3;
+
+  a {
+    display: inline-block;
+    border: none;
   }
 
-  .archive-events__item {
-    width: 46%;
-    box-sizing: border-box;
-
-    &:nth-child(even) {
-      padding-right: 0;
-    }
+  span {
+    border-bottom: 1px solid $light-color;
+    transition: 0.25s;
   }
+
+  a:hover span,
+  a:focus span {
+    border-bottom-color: currentColor;
+  }
+}
+
+.archive-events__date {
+  font-size: 16px;
+  color: #a8a9ac;
 }

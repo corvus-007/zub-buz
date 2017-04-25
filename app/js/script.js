@@ -6,7 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
   svg4everybody(); // run it now or whenever you are ready
 
   // Загрузка карты
-  loadMapScript()
+  if (document.getElementById("contacts-map")) {
+    loadMapScript();
+  }
 
 
 

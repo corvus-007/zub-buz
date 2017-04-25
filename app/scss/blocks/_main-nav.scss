@@ -16,6 +16,7 @@
 
   display: flex;
   flex-shrink: 0;
+  user-select: none;
 
   & > li {
     position: relative;
@@ -81,25 +82,26 @@
   font-size: 12px;
 }
 
-.sub-menu-drop {
+.sub-menu {
+  @include clear-list();
+
+  min-width: 300px;
   position: absolute;
   height: 500px;
   padding-top: 20px;
   padding-bottom: 20px;
   overflow: hidden;
+  font-size: 14px;
   overflow-y: auto;
   opacity: 0;
   visibility: hidden;
-  // transform-origin: 50% 0;
-  // transform: translateY(-10px) scale(0.9);
+  pointer-events: none;
   transition: opacity 0.25s, visibility 0s 0.25s;
   background-color: $accent-color;
   background-image: linear-gradient(to bottom, $accent-color 0.8em, rgba($accent-color, 0)),
-                    // radial-gradient(ellipse at top, rgba(#000, 0.6), transparent 70%),
-                    url("../../images/arrow-up.svg"),
+                    url("images/arrow-up.svg"),
                     linear-gradient(to top, $accent-color 0.8em, rgba($accent-color, 0)),
-                    // radial-gradient(ellipse at bottom, rgba(#000, 0.6), transparent 70%);
-                    url("../../images/arrow-down.svg");
+                    url("images/arrow-down.svg");
   background-size: 100% 2.5em,
                    100% 1.1rem,
                    100% 2.5em,
@@ -114,7 +116,6 @@
                        bottom;
   background-repeat: no-repeat;
   background-blend-mode: normal, overlay, normal, overlay;
-  // box-shadow: 0 3px 6px rgba($base-color, 0.3);
 
   &::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -131,20 +132,6 @@
       background-color: rgba(#111, 0.5);
     }
   }
-}
-
-.main-nav__list > li:hover .sub-menu-drop {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  transition: opacity 0.25s, transform 0.25s;
-}
-
-.sub-menu {
-  @include clear-list();
-
-  min-width: 300px;
-  font-size: 14px;
 
   & > li {
 
@@ -161,4 +148,12 @@
       }
     }
   }
+}
+
+.main-nav__list > li:hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition: opacity 0.25s, transform 0.25s;
 }
